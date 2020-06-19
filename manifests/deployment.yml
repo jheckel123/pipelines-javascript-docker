@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jheckelpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jheckelpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jheckelpipelinesjavascriptdocker 
+          image: heckelregistry.azurecr.io/jheckelpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
